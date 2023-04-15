@@ -5,10 +5,6 @@
 
   &__text {
     grid-column: 6 span;
-
-    @include small-tablet {
-      grid-column: 4 span;
-    }
   }
 
   &__title {
@@ -20,10 +16,6 @@
     line-height: 38px;
     letter-spacing: 1.2px;
     color: var(--dark-color);
-
-    @include small-tablet {
-      margin-bottom: 20px;
-    }
   }
 
   &__list {
@@ -32,19 +24,10 @@
     grid-column: 7 / 6 span;
     grid-template-columns: repeat(6, 1fr);
     row-gap: 36px;
-
-    @include small-tablet {
-      grid-column: 4 span;
-      grid-template-columns: repeat(4, 1fr);
-    }
   }
 
   &__item {
     grid-column: 3 span;
-
-    @include small-tablet {
-      grid-column: 4 span;
-    }
   }
 
   &__subtitle {
@@ -62,9 +45,5 @@
     font-size: 15px;
     line-height: 24px;
     color: var(--text-color);
-  }
-
-  @include small-tablet {
-    padding-bottom: 60px;
   }
 }
