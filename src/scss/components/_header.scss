@@ -24,6 +24,12 @@
     align-items: center;
     margin-right: 32px;
     gap: 51px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -42,6 +48,35 @@
     &:active {
       color: var(--active-color);
     }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  @include small-tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    overflow-y: auto;
+    padding: var(--offset);
+    width: 60%;
+    height: 100vh;
+    background-color: #001414;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    @include mini-mobile {
+      width: 80%;
+    }
+  }
+
+  @include small-tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 51px;
   }
 }
 

@@ -1,3 +1,4 @@
+/* stylelint-disable order/order */
 html {
   box-sizing: border-box;
 }
@@ -36,8 +37,7 @@ a {
 }
 
 .is-hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
+  display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -107,7 +107,6 @@ a {
   position: relative;
 }
 
-
 .flex {
   display: flex;
 }
@@ -116,9 +115,26 @@ a {
   display: grid;
   column-gap: var(--offset);
   grid-template-columns: repeat(12, 1fr);
+
+  @include small-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .graphics {
   width: 100%;
   background-color: #f4f5f5;
+}
+
+.burger {
+  @include burger;
+
+  --burger-height: 20px;
+
+  display: none;
+  color: var(--light-color);
+
+  @include small-tablet {
+    display: block;
+  }
 }
