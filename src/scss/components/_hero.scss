@@ -13,6 +13,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include small-tablet {
+    background-image: url("../img/hero-bg-mob.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: multiply;
+  }
+
   &__container {
     margin-bottom: var(--offset);
   }
