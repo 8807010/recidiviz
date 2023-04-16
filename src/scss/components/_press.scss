@@ -27,10 +27,24 @@
     color: var(--dark-color);
   }
 
-  &__link {
+  &__more {
     border: 1px solid rgba(53, 83, 98, 0.2);
     border-radius: 80px;
     color: #00413e;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--light-color);
+    }
+
+    &:active {
+      border-color: var(--active-color);
+      color: var(--light-color);
+    }
   }
 
   &__list {
@@ -144,5 +158,6 @@
 .press-card__link.focus-visible {
   &::after {
     outline: 1px solid var(--active-color);
+    outline-offset: 3px;
   }
 }

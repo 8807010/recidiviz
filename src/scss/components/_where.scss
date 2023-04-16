@@ -44,9 +44,26 @@
     border: none;
     font-size: 14px;
     background: #00665f;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      background-color: var(--accent-color);
+    }
+
+    &:active {
+      background-color: var(--active-color);
+    }
   }
 
   @include small-tablet {
     padding: 60px 0;
   }
+}
+
+.where__btn.focus-visible {
+  border: 1px solid var(--active-color);
 }

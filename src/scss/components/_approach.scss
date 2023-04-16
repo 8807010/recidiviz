@@ -63,6 +63,22 @@
     border: 1px solid rgba(53, 83, 98, 0.2);
     padding: 16px 34px;
     color: #00413e;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      background-color: var(--accent-color);
+      color: var(--light-color);
+    }
+
+    &:active {
+      background-color: var(--active-color);
+      border-color: var(--active-color);
+      color: var(--light-color);
+    }
   }
 
   &__bottom {
